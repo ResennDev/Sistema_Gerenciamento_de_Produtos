@@ -24,23 +24,16 @@ $produto = mysqli_fetch_assoc($resultado);
 
     <form action="atualizar.php" method="POST">
 
-    <input type="hidden" name="id" value="<? $produto['id'] ?>">
+    <input type="hidden" name="id" value="<?= $produto['id'] ?>">
 
     <label>Nome:</label>
-    <input type="text">
-    name="nome"
-    value="<? $produto['nome'] ?>"
-    <required>
+    <input type="text" name="nome" value="<?= $produto['nome'] ?>" required>
 
     <label>Descrição</label>
-    <textarea name="descricao"><?= $produto['descricao'] ?></textarea>
+    <textarea name="descricao" required><?= $produto['descricao'] ?></textarea>
 
     <label>Preço:</label>
-    <input type="number">
-    step="0.01"
-    name="preco"
-    value="<? $produto['preco'] ?>"
-    <required>
+    <input type="number" step="0.01" name="preco" value="<?= $produto['preco'] ?>" required>
 
     <button type="submit">Atualizar</button>
 

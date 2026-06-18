@@ -8,12 +8,13 @@ $descricao = $_POST['descricao'];
 $preco = $_POST['preco'];
 
 $sql = "UPDATE produtos
-SET nome ='$nome',
-descricao='$descricao',
-preco='$preco'
-WHERE id=$id";
+    SET nome ='$nome',
+        descricao='$descricao',
+        preco='$preco'
+    WHERE id=$id";
 
 mysqli_query($conexao, $sql);
 
 header("Location: index.php");
+exit();
 ?>

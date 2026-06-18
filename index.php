@@ -27,16 +27,16 @@ $resultado = mysqli_query($conexao, $sql);
             <th>Ações</th>
         </tr>
 
-        <?php while(produto = mysqli_fetchassoc($resultado)){ ?>
+        <?php while($produto = mysqli_fetch_assoc($resultado)){ ?>
         <tr>
             <td><?= $produto['id'] ?></td>
             <td><?= $produto['nome'] ?></td>
             <td><?= $produto['descricao'] ?></td>
             <td>R$ <?= number_format($produto['preco'],2,',','.') ?></td>
             <td>
-                <a href="editar.php?id=<?= produto['id'] ?>">Editar</a>
+                <a href="editar.php?id=<?= $produto['id'] ?>">Editar</a>
 
-                <a href="excluir.php?id=<?= $produto['id'] ?>" onclick"return confirm('Deseja excluir?')">Excluir</a>
+                <a href="excluir.php?id=<?= $produto['id'] ?>" onclick="return confirm('Deseja excluir?')">Excluir</a>
             </td>
         </tr>
         <?php } ?>
