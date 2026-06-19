@@ -12,4 +12,3 @@ VALUES ('$nome', '$descricao', '$preco')";
 mysqli_query($conexao, $sql);
 
 header("Location: ../index.php");
-?>

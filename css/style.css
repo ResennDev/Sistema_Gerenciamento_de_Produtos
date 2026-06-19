@@ -1,45 +1,95 @@
-body{
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1{
-    text-align: center;
+body {
+  background: #0d0f14;
+  font-family: "Segoe UI, systema-ui, sans-serif";
+  color: #c9cfe0;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
-table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+h1 {
+  text-align: left;
 }
 
-table, th, td{
-    border: 1px solid #ddd;
+container-table {
+  width: 80%;
+  margin: 0 auto;
 }
 
-th, td{
-    padding: 10px;
-    text-align: left;
+.tabela {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #13161c;
+  opacity: 70%;
 }
 
-.btn, button{
-    background: #0d6efd;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-a{
-    text-decoration: none;
+table,
+th,
+td {
+  border: 1px solid #ddd;
 }
 
-input, textarea{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+.acoes {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btn-New,
+button {
+  background: #5254cc;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.btnEdit {
+  align-items: start;
+  justify-items: left;
+  margin: auto;
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+.btnExc {
+  align-items: end;
+  justify-items: right;
+  margin: auto;
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
 }
