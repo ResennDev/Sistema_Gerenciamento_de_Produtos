@@ -1,6 +1,6 @@
 <?php
 
-include("conexao.php");
+include("../includes/conexao.php");
 
 $id = $_GET['id'];
 
@@ -8,5 +8,5 @@ $sql = "DELETE FROM produtos WHERE id = $id";
 
 mysqli_query($conexao, $sql);
 
-header("Location: index.php");
+header("Location: ../index.php");
 ?>

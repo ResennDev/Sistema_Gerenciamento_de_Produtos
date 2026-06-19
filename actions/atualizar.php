@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-include("conexao.php");
+include("../includes/conexao.php");
 
 $id = $_POST['id'];
 $nome = $_POST['nome'];
@@ -15,6 +15,6 @@ $sql = "UPDATE produtos
 
 mysqli_query($conexao, $sql);
 
-header("Location: index.php");
+header("Location: ../index.php");
 exit();
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-include("conexao.php");
+include("../includes/conexao.php");
 
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
@@ -11,5 +11,5 @@ VALUES ('$nome', '$descricao', '$preco')";
 
 mysqli_query($conexao, $sql);
 
-header("Location: index.php");
+header("Location: ../index.php");
 ?>

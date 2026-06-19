@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("<includes/conexao.php");
 
 $sql = "SELECT * FROM produtos";
 $resultado = mysqli_query($conexao, $sql);
@@ -16,7 +16,7 @@ $resultado = mysqli_query($conexao, $sql);
 <body>
     <h1>Gerenciamento de Produtos</h1>
 
-    <a href="cadastrar.php" class="btn">Novo Produto</a>
+    <a href="pages/cadastrar.php" class="btn">Novo Produto</a>
 
     <table>
         <tr>
@@ -34,9 +34,9 @@ $resultado = mysqli_query($conexao, $sql);
             <td><?= $produto['descricao'] ?></td>
             <td>R$ <?= number_format($produto['preco'],2,',','.') ?></td>
             <td>
-                <a href="editar.php?id=<?= $produto['id'] ?>">Editar</a>
+                <a href="pages/editar.php?id=<?= $produto['id'] ?>">Editar</a>
 
-                <a href="excluir.php?id=<?= $produto['id'] ?>" onclick="return confirm('Deseja excluir?')">Excluir</a>
+                <a href="pages/excluir.php?id=<?= $produto['id'] ?>" onclick="return confirm('Deseja excluir?')">Excluir</a>
             </td>
         </tr>
         <?php } ?>
