@@ -17,16 +17,16 @@
         <div class="page-header">
             <h1 class="page-title">
                 <i class="ti ti-plus"></i>
-                Novo Produto
+                Cadastrar Produto
             </h1>
 
-            <a href="../index.php" class="btn-new">
+            <a href="../index.php" class="btn-novo">
                 <i class="ti ti-arrow-left"></i>
                 Voltar
             </a>
         </div>
 
-        <div class="table-wrapper" style="padding: 25px;">
+        <div class="table-cabecalho" style="padding: 25px;">
 
             <form action="../actions/salvar.php" method="POST">
 
@@ -35,6 +35,7 @@
                     <input
                         type="text"
                         name="nome"
+                        maxlength="50"
                         placeholder="Digite o nome do produto"
                         required>
                 </div>
@@ -44,6 +45,7 @@
                     <input
                         type="text"
                         name="descricao"
+                        maxlength="150"
                         placeholder="Digite a descrição do produto">
                 </div>
 

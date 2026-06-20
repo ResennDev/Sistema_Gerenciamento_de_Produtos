@@ -33,7 +33,7 @@ $produto = mysqli_fetch_assoc($resultado);
                 Editar Produto
             </h1>
 
-            <a href="../index.php" class="btn-new">
+            <a href="../index.php" class="btn-novo">
                 <i class="ti ti-arrow-left"></i>
                 Voltar
             </a>
@@ -50,6 +50,7 @@ $produto = mysqli_fetch_assoc($resultado);
                     <input
                         type="text"
                         name="nome"
+                        maxlength="50"
                         value="<?= $produto['nome'] ?>"
                         required>
                 </div>
@@ -59,6 +60,7 @@ $produto = mysqli_fetch_assoc($resultado);
                     <input
                         type="text"
                         name="descricao"
+                        maxlength="150"
                         value="<?= $produto['descricao'] ?>"
                         required>
                 </div>
@@ -73,7 +75,7 @@ $produto = mysqli_fetch_assoc($resultado);
                         required>
                 </div>
 
-                <div class="form-actions">
+                <div class="form-acoes">
                     <button type="submit" class="btn-save">
                         <i class="ti ti-device-floppy"></i>
                         Atualizar
