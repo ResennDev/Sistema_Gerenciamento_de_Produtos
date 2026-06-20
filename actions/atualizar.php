@@ -5,7 +5,9 @@ include("../includes/conexao.php");
 $id = $_POST['id'];
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
-$preco = $_POST['preco'];
+$preco = str_replace('R$ ', '', $_POST['preco']);
+$preco = str_replace('.', '', $preco);
+$preco = str_replace(',', '.', $preco);
 
 $sql = "UPDATE produtos
     SET nome ='$nome',
